@@ -11,8 +11,8 @@ gem 'rails', '~> 7.0.4'
 gem 'sprockets-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem 'devise'
-gem 'devise-i18n'
+gem 'bcrypt'
+gem 'jwt'
 gem 'sidekiq'
 
 group :development, :test do
