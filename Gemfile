@@ -16,8 +16,13 @@ gem 'devise-i18n'
 gem 'sidekiq'
 
 group :development, :test do
+  gem 'brakeman'
+  gem 'bundler-audit'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'ffaker'
   gem 'rspec-rails'
+  gem 'rubocop'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec', require: false
 end
