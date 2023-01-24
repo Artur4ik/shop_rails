@@ -12,9 +12,8 @@ module Auth
       def decode(token)
         body, = JWT.decode(token, fetch_secret_key_base,
                            true, algorithm: 'HS256')
-        HashWithIndifferentAccess.new(body)
-      rescue JWT::ExpiredSignature
-        nil
+
+        body.with_indifferent_access
       end
 
       private
