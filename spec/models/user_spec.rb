@@ -3,10 +3,12 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject(:user) { described_class.new(email:, password_digest:, admin:) }
+  subject(:user) { described_class.new(first_name:, email:, password_digest:, birthdate:, admin:) }
 
+  let(:first_name) { 'Vasya' }
   let(:email) { 'test@example.com' }
   let(:password_digest) { 'qwerty' }
+  let(:birthdate) { '18.01.1998' }
   let(:admin) { false }
 
   it 'return user email' do

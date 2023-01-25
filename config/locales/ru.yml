@@ -1,0 +1,20 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: Пустой Email
+            first_name:
+              blank: Пустой имя
+            password:
+              blank: Пустой пароль
+            birthdate:
+              blank: Пустая дата рождения
+  errors:
+    token:
+      invalid: Неверный токен
+      expired: Просроченный токен
+    user:
+      not_found: Пользователь ID=%{id} не найден

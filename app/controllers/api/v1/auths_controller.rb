@@ -2,19 +2,21 @@
 
 module Api
   module V1
-    class AuthsController < ApplicationController
+    class AuthsController < BaseController
       def create
+        authenticate.call
+
         if authenticate.success?
           render json: authenticate.token, status: :ok
         else
-          render json: authenticate.errors, status: :unauthorized
+          render json: { errors: authenticate.errors }, status: :unauthorized
         end
       end
 
       private
 
       def authenticate
-        @authenticate ||= Auth::Commands::Authenticate.call(email, password)
+        @authenticate ||= Users::Commands::Authenticate.new(email, password)
       end
 
       def email
