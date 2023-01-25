@@ -5,8 +5,7 @@ module Users
     class Authorize < Base
       attr_reader :user
 
-      def initialize(token)
-        super
+      def initialize(token) # rubocop:disable Lint/MissingSuper
         @token = token
       end
 

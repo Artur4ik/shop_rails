@@ -6,8 +6,7 @@ module Users
       validate :check_email
       validate :check_password
 
-      def initialize(email, password)
-        super
+      def initialize(email, password) # rubocop:disable Lint/MissingSuper
         @email = email
         @password = password
       end
