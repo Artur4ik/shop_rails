@@ -18,3 +18,10 @@ ru:
       expired: Просроченный токен
     user:
       not_found: Пользователь ID=%{id} не найден
+    product:
+      not_found: Продукт ID=%{product_id} с категорией ID=%{product_category_id} не найден
+    product_category:
+      not_found: Категория продуктов ID=%{product_category_id} не найдена
+    api:
+      accept: Неверный тип данных в заголовоке Accept. Поддерживается только 'application/json'
+      content_type: Неверный тип данных в заголовоке Content-type. Поддерживается только 'application/json'

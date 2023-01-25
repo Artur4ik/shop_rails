@@ -7,7 +7,7 @@ module Api
 
       def show
         render json: @user,
-               serializer: Api::V1::UserSerializer,
+               serializer: UserSerializer,
                status: :ok
       end
 
@@ -16,7 +16,7 @@ module Api
 
         if @user.save
           render json: @user,
-                 serializer: Api::V1::UserSerializer,
+                 serializer: UserSerializer,
                  status: :created
         else
           render json: { errors: @user.errors }, status: :unprocessable_entity
@@ -26,7 +26,7 @@ module Api
       def update
         if @user.update(update_user_params)
           render json: @user,
-                 serializer: Api::V1::UserSerializer,
+                 serializer: UserSerializer,
                  status: :ok
         else
           render json: { errors: @user.errors }, status: :unprocessable_entity
@@ -36,7 +36,7 @@ module Api
       def destroy
         if @user.destroy
           render json: @user,
-                 serializer: Api::V1::UserSerializer,
+                 serializer: UserSerializer,
                  status: :ok
         else
           render json: { errors: @user.errors }, status: :unprocessable_entity

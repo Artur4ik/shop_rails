@@ -18,3 +18,10 @@ en:
       expired: Expired token
     user:
       not_found: User with ID=%{id} not found
+    product:
+      not_found: Product with ID=%{product_id} in category ID=%{product_category_id} not found
+    product_category:
+      not_found: Product category with ID=%{product_category_id} not found
+    api:
+      accept: Invalid data type in Accept header. Supported only 'application/json'
+      content_type: Invalid data type in Content-type header. Supported only 'application/json'

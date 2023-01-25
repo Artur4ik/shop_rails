@@ -71,3 +71,5 @@ Layout/LineLength:
   Max: 198
 Style/Documentation:
   Enabled: false
+Metrics/BlockLength:
+  Max: 250
