@@ -73,3 +73,5 @@ Style/Documentation:
   Enabled: false
 Metrics/BlockLength:
   Max: 250
+AllCops:
+    NewCops: enable
