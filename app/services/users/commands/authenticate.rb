@@ -27,11 +27,11 @@ module Users
       attr_reader :email, :password
 
       def check_email
-        errors.add(:email, 'Invalid user email') unless user
+        errors.add(:email, raw_invalid_email_error) unless user
       end
 
       def check_password
-        errors.add(:password, 'Invalid user password') if valid_email? && invalid_password?
+        errors.add(:password, raw_invalid_password_error) if valid_email? && invalid_password?
       end
 
       def valid_email?
@@ -55,6 +55,14 @@ module Users
 
       def exp
         12.hours.from_now.to_i
+      end
+
+      def raw_invalid_email_error
+        I18n.t('activerecord.errors.models.user.attributes.email.invalid')
+      end
+
+      def raw_invalid_password_error
+        I18n.t('activerecord.errors.models.user.attributes.password.invalid')
       end
     end
   end

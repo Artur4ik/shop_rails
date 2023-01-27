@@ -8,6 +8,10 @@ module Api
 
       CONTENT_TYPE = 'application/json'
 
+      rescue_from ActionController::ParameterMissing do |exception|
+        render_errors(raw_param_missing_error(exception.param), :bad_request)
+      end
+
       protected
 
       def render_errors(errors, status)
@@ -27,7 +31,7 @@ module Api
       end
 
       def content_type
-        request.headers.fetch('Content-type', '')
+        request.headers.fetch('Content-Type', '')
       end
 
       def raw_accept_error
@@ -36,6 +40,10 @@ module Api
 
       def raw_content_type_error
         I18n.t('errors.api.content_type')
+      end
+
+      def raw_param_missing_error(param)
+        I18n.t('errors.api.param_missing', param:)
       end
     end
   end

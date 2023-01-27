@@ -6,12 +6,16 @@ en:
           attributes:
             email:
               blank: Empty Email
+              invalid: Invalid Email
             first_name:
               blank: Empty name
+              invalid: Invalid name
             password:
               blank: Empty password
+              invalid: Invalid password
             birthdate:
               blank: Empty birthdate
+              invalid: Invalid birthdate
   errors:
     token:
       invalid: Invalid token
@@ -25,3 +29,4 @@ en:
     api:
       accept: Invalid data type in Accept header. Supported only 'application/json'
       content_type: Invalid data type in Content-type header. Supported only 'application/json'
+      param_missing: Missing or invalid param '%{param}'

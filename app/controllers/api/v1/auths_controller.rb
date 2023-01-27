@@ -28,7 +28,7 @@ module Api
       end
 
       def user_params
-        @user_params ||= params[:user]
+        @user_params ||= params.require(:user)
       end
     end
   end

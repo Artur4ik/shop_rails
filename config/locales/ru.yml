@@ -6,12 +6,16 @@ ru:
           attributes:
             email:
               blank: Пустой Email
+              invalid: Неверный Email
             first_name:
               blank: Пустой имя
+              invalid: Неверное имя
             password:
               blank: Пустой пароль
+              invalid: Неверный пароль
             birthdate:
               blank: Пустая дата рождения
+              inavlid: Неверная дата рождения
   errors:
     token:
       invalid: Неверный токен
@@ -25,3 +29,4 @@ ru:
     api:
       accept: Неверный тип данных в заголовоке Accept. Поддерживается только 'application/json'
       content_type: Неверный тип данных в заголовоке Content-type. Поддерживается только 'application/json'
+      param_missing: Пустой или неверный параметр '%{param}'
